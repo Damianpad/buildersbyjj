@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -100,6 +103,49 @@ li {
 }
 
 /* Above The Fold */
+.main-section {
+    background: url(/builders-by-jj/assets/roof_2.png);
+    width: auto;
+    height: auto;
+    /* width: 100vw;
+    height: 50vh;
+    object-fit: cover; */
+}
+/* .main-section {
+    position: absolute;
+} */
+
+.sub-section{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.main-heading {
+    z-index: 1;
+    color: white;
+    font-family:'Fira Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 2em;
+}
+
+.second-heading {
+    font-family:'Fira Sans', sans-serif;
+    font-weight: 600;
+    color: #ef4d45;
+    padding: 1em;
+}
+
+.main-img {
+    filter: brightness(0.4);
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
 .main-video {
     filter: brightness(0.4);
     width: 100vw;
