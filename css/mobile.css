@@ -1,0 +1,989 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables */
+
+:root {
+    --primary-color: #232F3D;
+    --primary-hover: #5C718A;
+    --secondary: #263b2e;
+    --secondary-highlight: #61826D;;
+    --highlight: #ced7de;
+}
+
+/* Scrolling Color change */
+.nav-white {
+    background: white;
+    transition: background-color 200ms linear;
+
+}
+
+.nav-dark {
+
+}
+
+.dark-logo{
+    background-image: url('/roofing-website/assets/JJ\ Builders\ Logo_transparent.png');
+}
+
+
+
+/* Hamburger Menu */
+.nav-links{
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform .2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: var(--primary-color);
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+#close-icon{
+    display: none;
+    position: relative;
+    z-index: 3;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+}
+
+#close-icon:hover{
+    cursor: pointer;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.menu-item {
+  display: block;
+  margin: 2rem 1rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.fa-bars {
+    font-size: 2.3em;
+    color: white;
+    margin: 0 .6em;
+    z-index: 5;
+}
+ 
+/* Navigation */
+
+nav {
+    
+    color: var(--highlight);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    padding: 1em;
+}
+
+.nav-links {
+    /* display: none; */
+    text-transform: uppercase;
+}
+
+.quote-btn {
+    display: none;
+    text-transform: uppercase;
+}
+
+.fa-bars {
+    font-size: 2.3em;
+    color: white;
+    margin: 0 .6em;
+    z-index: 4;
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+}
+
+.fa-bars-scroll {
+    font-size: 2.3em;
+    color: var(--primary-color);
+    margin: 0 .6em;
+    transition: background-color 200ms linear;
+}
+
+
+/* Main */
+.main {
+    background: var(--primary-color);
+    width: 100%;
+}
+
+.main-header {
+    width: 100%;
+    position: relative;
+}
+
+
+.main-video {
+    filter: brightness(0.4);
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    
+    top: 60%;
+    left: 50%;  
+      
+    transform: translate(-50%, -50%);  
+    z-index: 0;
+    padding: 0;
+    padding-bottom: 4em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#slogan {
+    font-size: 1.6em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.main-hook {
+    padding: 1em;
+}
+
+.learn-btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1em 3em;
+    background: var(--primary-color);
+    color: white;
+    min-width: 15em;
+    letter-spacing: 0.125em;
+    margin: 1em 5em;
+    text-transform: uppercase;
+}
+
+.learn-btn:hover {
+    background: var(--primary-hover);
+    cursor: pointer;;
+}
+
+.contact-btn {
+    display: none;
+    text-transform: uppercase;
+}
+
+.fa-angle-down {
+    padding: 1em;
+    color: white;
+}
+
+.fa-angle-down:hover {
+    cursor: pointer;
+    font-size: 1.3em;
+    transition-property: font-size;
+    transition-duration: 1.3s;
+    /* transition-delay: 2s; */
+}
+
+/* Form */
+.upper-form {
+    padding: 1.2em;
+    background: var(--primary-color);
+}
+
+.form-title {
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: .9em;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.get-started {
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: .2em;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.get-started:hover {
+    cursor: pointer;
+    background: var(--secondary-highlight)
+}
+
+
+/* About Us */
+.about-us {
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+}
+.about-image {
+    background: var(--primary-color);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.about-spacer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-info {
+    background: white;
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.about-info h2, h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 25px;
+}
+
+.about-info h2 {
+    font-size: 2em;
+    font-weight: 600;
+    padding: .8em;
+    color: var(--primary-color);
+}
+
+.about-info h1 {
+    padding-bottom: 2em;
+
+}
+
+.about-video {
+    width: 100%;
+    margin: 0;
+}
+
+.about-paragraph {
+    line-height: 25px;
+    font-size: 1em;
+    padding: 3em;
+    color: white;
+    background: var(--primary-color);
+    text-align: left;
+}
+
+/* Testimonial */
+.testimonial-section {
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.testimonial-section h1 {
+    color: var(--primary-color);
+    padding: 1em;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.testimonial-section h2 {
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.6em;
+    text-transform: uppercase;
+}
+
+.testimonials {
+    background: var(--secondary);
+    margin: 0;
+    color: var(--highlight);
+    padding: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+.testimonial-section i {
+    color: var(--highlight);
+}
+
+.text-block {
+    padding: 2em;
+    border: 1px solid white;
+}
+
+.text-block p {
+    margin: 1em;
+    line-height: 1.4em;
+}
+
+.text-block span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--primary-color);
+    color: white;
+}
+
+.contact-form h1 {
+    color: white;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  #form-btn {
+    background-color: white;
+    color: var(--secondary)
+  }
+
+/* Footer */
+.footer {
+    background: var(--secondary);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+.brand-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer img {
+    width: 100px;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25em;
+    padding: 1em 2em;
+
+}
+
+footer i {
+    margin: 0 1em;
+}
+
+.brand-footer p {
+    text-align: center;
+    
+}
+
+.cta-footer {
+
+}
+
+.nav-links {
+    padding: 2em;
+}
+
+.cta-footer .nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-footer .nav-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.cta-footer .nav-links li{
+    list-style: none;
+    padding: 1em;
+}
+
+.address a {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.contact-info {
+    text-align: center;
+    padding: .6em;
+}
+.contact-info li {
+    padding: .5em;
+}
+
+.cta-footer button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1em 3em;
+    background: var(--primary-color);
+    color: white;
+    min-width: 15em;
+    letter-spacing: 0.125em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-footer button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.cta-footer button i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.hours-footer h2 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.hours-footer ul {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+.hours-footer li {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Copyright */
+.copyright {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+    background: var(--secondary);
+    text-align: center;
+}
+
+/* Small Tablet */
+@media screen and (min-width: 620px) {
+
+    
+    /* Main */
+    .overlay {
+        top: 70%;
+        padding-bottom: 2em;
+        text-align: center;
+    }
+
+    .main-hook {
+        padding: 1.5em;
+    }
+
+    /* About Us */
+    .about-info h2 {
+        font-size: 2.5em;
+    }
+
+    .about-info h1 {
+        font-size: 1.2em;
+        padding-bottom: 3em;
+    }
+
+/* Testimonial */
+
+    .testimonial-section header {
+        padding: 3em;
+    }
+
+    .testimonial-section h1 {
+        font-size: 2em;
+    }
+
+    
+    .testimonial-section h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* Large Tablets */
+@media screen and (min-width: 960px) {
+    
+    .dark-desktop{
+        color: var(--primary-color);
+    }
+    
+    .light-desktop{
+        color: white;
+    }
+    /* Navigation */
+    .desktop-nav {
+        display: flex;
+    }   
+    
+    .desktop-nav a {
+        text-decoration: none;
+        padding: .5em;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        z-index: 999;
+        font-size: 1.4em;
+    }
+
+
+
+    .open-menu {
+        display: none;
+    }
+
+    .quote-btn {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9em;
+        font-weight: 700;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+        padding: 1em 3em;
+        background: var(--primary-color);
+        color: white;
+        min-width: 9em;
+        letter-spacing: 0.125em;
+        margin-right: 1em;
+        text-decoration: none;
+    }
+
+    .quote-btn:hover {
+        background: var(--primary-hover);
+    }
+
+    /* Main */
+        .overlay {
+            top: 50%;
+            left: 50%;     
+            padding-bottom: 2em;
+            text-align: center;
+            width: 70%;
+        }
+
+        #slogan {
+            font-size: 2.5em;
+        }
+    
+        .main-hook {
+            font-size: 1.5em;
+            padding: .5em;
+        }
+
+        .contact-btn {
+            display: inline;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9em;
+            font-weight: 700;
+            border: 1px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 1em 3em;
+            background: var(--primary-color);
+            color: white;
+            min-width: 15em;
+            letter-spacing: 0.125em;
+            margin: 1em 5em;
+        }
+
+        .contact-btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-hover);
+            cursor: pointer;;
+        }
+
+        .main-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .main-buttons button {
+            margin: .3em;
+        }
+
+        .fa-angle-down{
+            font-size: 2em;
+            bottom: 20%;
+        }
+
+        /* Form */
+        .upper-form form {
+        }
+
+        .message {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* About */
+        .about-info {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            padding: 3em;
+        }
+
+        .about-info h1 {
+            padding-bottom: 1em;
+        }
+
+        .about-video {
+            width: 60%;
+        }
+
+        .about-vid-p {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .about-info p {
+        
+            padding: 1em;
+            font-size: 1.3em;
+        }
+
+
+
+        /* Testimonial */
+        .testimonial-section h1 {
+            font-size: 2.5em;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2em;
+        }
+}
+
+/* Desktops */
+@media screen and (min-width: 1200px) {
+    .main-video {
+        margin-top: 115px;
+        filter: brightness(0.4);
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        padding: 0;
+    }
+
+    #slogan {
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .main-hook {
+        text-align: left;
+        font-size: 4em;
+        padding: 0;
+    }
+
+    .main-buttons {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 3em;
+    }
+
+    /* About */
+    .about-info h1 {
+        padding-bottom: 2em;
+    }
+
+    .about-vid-p {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2em;
+    }
+
+    .about-video {
+        width: 50%;
+    }
+
+    .about-info p {
+    
+        padding: 1em;
+        font-size: 2em;
+    }
+
+    /* Contact Form */
+    /* .contact-form form input, #subject {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-items: center;
+    } */
+
+    /* Footer */
+  footer {
+    background: var(--secondary);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4em;
+  }
+
+  .footer h2 {
+    margin: 1em 0 3em 0;
+    color: white;
+
+  }
+
+  .brand-footer {
+    font-size: 1em;
+    color: white;
+  }
+
+  .brand-footer img {
+    width: 200px;
+  }
+
+  .brand-footer p {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand-footer i {
+    font-size: 1.25em;
+    padding: 1em;
+  }
+
+  .cta-footer {
+    justify-content: center;
+  }
+
+  .cta-footer li {
+    list-style: none;
+  }
+
+  .cta-footer li a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    padding: 1em;
+    white-space: nowrap;
+  }
+
+  .cta-footer button {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1em 3em;
+    background: var(--primary-color);
+    color: white;
+    min-width: 15em;
+    letter-spacing: 0.125em;
+    justify-content: center;
+  }
+
+  .cta-footer button:hover {
+    background: var(--main-color-hover);
+    cursor: pointer;
+  }
+
+  .cta-footer a {
+    text-decoration: none;
+    color: white;
+  }
+.address {
+    padding: 1em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.address a:hover{
+    color: var(--main-color-hover);
+}
+
+.hours-footer {
+    display: inline;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .6em;
+}
+
+.hours-footer h2 {
+    margin: 0;
+}
+
+.hours-footer ul {
+    display: inline;
+    color: white;
+}
+}
+/* Mailchimp CSS */
+#mc_embed_signup{
+    background: var(--primary-color); 
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;  
+    width:600px;
+
+}
+
+#mce-MMERGE5 {
+    height:200px
+}
+
+.helper_text {
+    color: red;
+    background: green;
+}
