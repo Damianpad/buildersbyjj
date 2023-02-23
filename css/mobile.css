@@ -127,7 +127,7 @@ table {
 }
  
 /* Navigation */
-.desktop-nav a {
+.desktop-nav {
     display: none;
 }
 
@@ -363,14 +363,40 @@ nav {
     background: var(--primary-color);
     text-align: left;
 }
+.about-paragraph p {
+    padding: 1em;
+}
+
+.about-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+    border: 1px solid white;
+
+}
 
 /* Before and After Container */
+.before-after {
+    width: auto;
+}
+
 .before-after h1 {
     color: var(--primary-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     padding: 2em;
+}
+
+/* Before and After Video */
+.before-after-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 400px;
+   margin: 0 auto;
+   padding: 0 0 2em 0;
 }
 
 /* Before and After Slider */
@@ -711,7 +737,7 @@ footer i {
     
     /* Main */
     .overlay {
-        top: 70%;
+        top: 50%;
         padding-bottom: 2em;
         text-align: center;
     }
@@ -736,8 +762,8 @@ footer i {
 }
 
 /* Before and After */
-.before-after{
-
+.before-after-video{
+    width: 600px;
 }
 #comparison{
     padding: 0 0 3em 0;
@@ -780,9 +806,15 @@ figure#comparison-img{
     /* Navigation */
     .desktop-nav {
         display: flex;
+        text-transform: uppercase;
     }   
+
+    .desktop-nav a:hover {
+        border-bottom: 1px solid white;
+    }
     
     .desktop-nav a {
+        display: flex;
         text-decoration: none;
         padding: .5em;
         color: white;
@@ -886,13 +918,12 @@ figure#comparison-img{
 
         /* About */
         .about-us {
-            width: 100vw;
+            
         }
         .about-info {
             display: inline-block;
             justify-content: center;
             align-items: center;
-            padding: 3em;
         }
 
         .about-info h1 {
@@ -901,13 +932,15 @@ figure#comparison-img{
 
         .about-video {
             width: 50%;
+            height: auto;
+            object-fit: fill;
+            padding: 0;
         }
 
         .about-vid-p {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            padding: 2em;
             
         }
 
@@ -955,8 +988,15 @@ figure#comparison-img{
 
 /* Desktops */
 @media screen and (min-width: 1200px) {
+
+    .desktop-nav{
+        
+        z-index: 4;
+        color: white;
+    }
+
+
     .main-video {
-        margin-top: 115px;
         filter: brightness(0.4);
         width: 100vw;
         height: 100vh;
@@ -974,20 +1014,40 @@ figure#comparison-img{
     }
 
     #slogan {
-        text-align: left;
+        padding: 1em 1em 0 1em;
         font-size: 2em;
     }
 
     .main-hook {
         text-align: left;
-        font-size: 4em;
-        padding: 0;
+        font-size: 2em;
+        padding: 1em;
+
     }
 
     .main-buttons {
         display: flex;
         justify-content: flex-start;
         padding-right: 3em;
+    }
+
+    /* Upper Forms */
+    .upper-form input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .upper-form form{
+        display: flex;
+        flex-direction: column;
+        max-width: 40em;
+        margin: 0 auto;
+    }
+
+    .message {
+       
     }
 
     /* About */
@@ -1007,9 +1067,14 @@ figure#comparison-img{
     }
 
     .about-info p {
-    
         padding: 1em;
         font-size: 2em;
+        line-height: 40px;
+    }
+
+    /* Before and After Vid */
+    .before-after-video {
+        width: 1000px;
     }
 
     /* Contact Form */
