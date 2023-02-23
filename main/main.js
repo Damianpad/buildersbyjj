@@ -10,6 +10,12 @@ const closeIcon = document.querySelector('#close-icon')
 const menuIcon = document.querySelector('.menu-icon')
 const desktopMenu = document.querySelector('#desk-item')
 
+var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() { 
+	divisor.style.width = slider.value+"%";
+}
+
 window.onscroll = function changeNavColor() {
     if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100 ) {
         console.log(nav.scrollTop)
