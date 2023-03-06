@@ -55,6 +55,7 @@ table {
     --secondary: #263b2e;
     --secondary-highlight: #61826D;;
     --highlight: #ced7de;
+    --dark-footer: #0A1726;
 }
 
 /* Scrolling Color change */
@@ -584,8 +585,12 @@ input[type=text], select, textarea {
   }
 
 /* Footer */
+footer {
+    background: var(--dark-footer);
+}
+
 .footer {
-    background: var(--secondary);
+    background: var(--dark-footer);
     color: white;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
@@ -727,7 +732,7 @@ footer i {
     align-items: center;
     color: white;
     margin: 0;
-    background: var(--secondary);
+    background: var(--dark-footer);
     text-align: center;
 }
 
@@ -1088,18 +1093,18 @@ figure#comparison-img{
 
     /* Footer */
   footer {
-    background: var(--secondary);
+    background: var(--dark-footer);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 5em;
+    padding: 2.5em 5em 0 5em;
   }
 
   .footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4em;
+   
   }
 
   .footer h2 {
