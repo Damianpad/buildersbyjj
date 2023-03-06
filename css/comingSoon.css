@@ -1,0 +1,17 @@
+/* Main */
+
+.fa-hammer {
+    font-size: 5em;
+    padding: .5em;
+}
+
+#back-btn {
+    border: 1px solid white;
+    padding: 1em;
+    margin: 4em;
+}
+
+#sorry {
+    text-transform: none;
+    line-height: 1.5em;
+}

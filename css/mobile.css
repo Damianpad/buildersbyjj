@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Variables */
 
 :root {
@@ -126,6 +130,7 @@ table {
     margin: 0 .6em;
     z-index: 5;
 }
+
  
 /* Navigation */
 .desktop-nav {
@@ -179,6 +184,9 @@ nav {
     transition: background-color 200ms linear;
 }
 
+.fa-facebook {
+    font-size: 1.5em;
+}
 
 /* Main */
 .main {
@@ -242,6 +250,11 @@ nav {
     letter-spacing: 0.125em;
     margin: 1em 5em;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.learn-btn a {
+    text-decoration: none;
 }
 
 .learn-btn:hover {
@@ -357,7 +370,8 @@ nav {
 }
 
 .about-paragraph {
-    line-height: 25px;
+    text-transform: none;
+    line-height: 1.5em;
     font-size: 1em;
     padding: 3em;
     color: white;
@@ -374,7 +388,11 @@ nav {
     align-items: center;
     margin: 1em auto;
     border: 1px solid white;
+    text-decoration: none;
+}
 
+.about-btn a {
+    text-decoration: none;
 }
 
 /* Before and After Container */
@@ -587,6 +605,7 @@ input[type=text], select, textarea {
 /* Footer */
 footer {
     background: var(--dark-footer);
+    padding-top: 2em;
 }
 
 .footer {
