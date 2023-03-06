@@ -320,7 +320,7 @@ nav {
     height: 150px;
     background-image: url('/assets/Talon_A2.jpg'); /* 1 */
     background-image:
-      linear-gradient(hsla(219, 61%, 21%, 0.8), 95%, #232F3D),
+      linear-gradient(hsla(218, 72%, 14%, 0.753), 95%, #232F3D),
       url('/assets/Talon_A2.jpg');
     background-position: center center;
     background-size: cover;
